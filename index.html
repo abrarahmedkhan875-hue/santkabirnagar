@@ -1,0 +1,762 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Abrar Ahmed | Web Developer & SEO Learner</title>
+
+<meta name="description" content="Welcome to Abrar Ahmed's professional portfolio. Explore web development, SEO skills and projects.">
+
+<meta name="author" content="Abrar Ahmed">
+
+<style>
+
+/* GLOBAL CSS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #080e1c;
+    color: white;
+    line-height: 1.7;
+}
+
+:root {
+    --blue: #38bdf8;
+    --dark: #101a2e;
+    --light: #cbd5e1;
+}
+
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* NAVBAR */
+
+header {
+    background: rgba(8,14,28,0.95);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #1e293b;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: var(--blue);
+}
+
+.logo span {
+    color: white;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 22px;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--blue);
+}
+
+/* HERO SECTION */
+
+.hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 70px 0;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.tag {
+    color: var(--blue);
+    background: #12243c;
+    display: inline-block;
+    padding: 7px 18px;
+    border-radius: 30px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 55px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.hero h1 span {
+    color: var(--blue);
+}
+
+.hero h2 {
+    color: #cbd5e1;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    color: #94a3b8;
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 12px 25px;
+    border-radius: 7px;
+    background: var(--blue);
+    color: #06111f;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: white;
+    transform: translateY(-4px);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid var(--blue);
+    color: var(--blue);
+}
+
+/* PROFILE IMAGE */
+
+.hero-image {
+    flex: 0 0 350px;
+    display: flex;
+    justify-content: center;
+}
+
+.image-box {
+    width: 320px;
+    height: 380px;
+    border-radius: 25px;
+    padding: 8px;
+    border: 2px solid var(--blue);
+    background: #14243d;
+    box-shadow: 0 0 40px rgba(56,189,248,0.2);
+    overflow: hidden;
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 18px;
+}
+
+/* COMMON SECTION */
+
+section {
+    padding: 85px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 36px;
+    color: var(--blue);
+}
+
+.section-title p {
+    color: #94a3b8;
+    margin-top: 10px;
+}
+
+/* ABOUT */
+
+.about {
+    background: var(--dark);
+}
+
+.about-content {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+    color: var(--light);
+    font-size: 17px;
+}
+
+/* SKILLS */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.skill-card {
+    background: var(--dark);
+    padding: 28px;
+    border-radius: 12px;
+    border: 1px solid #263750;
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--blue);
+}
+
+.skill-card h3 {
+    color: var(--blue);
+    margin-bottom: 10px;
+}
+
+.skill-card p {
+    color: #94a3b8;
+}
+
+/* PROJECTS */
+
+.projects {
+    background: var(--dark);
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.project-card {
+    background: #17243b;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #263750;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--blue);
+}
+
+.project-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 22px;
+}
+
+.project-info h3 {
+    color: var(--blue);
+    margin-bottom: 10px;
+}
+
+.project-info p {
+    color: #cbd5e1;
+    margin-bottom: 15px;
+}
+
+.project-info a {
+    color: var(--blue);
+    text-decoration: none;
+}
+
+/* EDUCATION */
+
+.education-card {
+    max-width: 700px;
+    margin: auto;
+    padding: 35px;
+    text-align: center;
+    background: var(--dark);
+    border-radius: 12px;
+    border: 1px solid #263750;
+}
+
+.education-card h3 {
+    color: var(--blue);
+    margin-bottom: 12px;
+}
+
+/* CONTACT */
+
+.contact {
+    background: var(--dark);
+    text-align: center;
+}
+
+.contact p {
+    color: #cbd5e1;
+    margin: 12px 0;
+}
+
+.contact a {
+    color: var(--blue);
+    text-decoration: none;
+}
+
+/* SOCIAL LINKS */
+
+.social {
+    margin-top: 25px;
+}
+
+.social a {
+    display: inline-block;
+    margin: 8px;
+    padding: 10px 20px;
+    border: 1px solid var(--blue);
+    border-radius: 7px;
+    transition: 0.3s;
+}
+
+.social a:hover {
+    background: var(--blue);
+    color: #080e1c;
+}
+
+/* FOOTER */
+
+footer {
+    background: #080e1c;
+    text-align: center;
+    padding: 25px;
+    color: #94a3b8;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media(max-width: 900px) {
+
+    .container {
+        width: 90%;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .hero p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+
+    .skills-grid,
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media(max-width: 600px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    nav a {
+        margin: 0;
+        font-size: 13px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero h2 {
+        font-size: 20px;
+    }
+
+    .hero-image {
+        flex: auto;
+    }
+
+    .image-box {
+        width: 250px;
+        height: 290px;
+    }
+
+    .skills-grid,
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title h2 {
+        font-size: 29px;
+    }
+
+    section {
+        padding: 60px 0;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<header>
+<div class="container navbar">
+
+    <div class="logo">Abrar<span>.</span></div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+</div>
+</header>
+
+
+<!-- HERO -->
+
+<section class="container hero" id="home">
+
+    <div class="hero-content">
+
+        <div class="tag">Welcome To My Portfolio</div>
+
+        <h1>Hi, I'm <span>Abrar Ahmed</span></h1>
+
+        <h2>Web Developer & SEO Learner</h2>
+
+        <p>
+            I am passionate about Web Development and Digital Marketing.
+            I enjoy creating modern websites, learning new technologies
+            and exploring Search Engine Optimization.
+        </p>
+
+        <div class="buttons">
+
+            <a href="#projects" class="btn">Explore My Work</a>
+
+            <a href="#contact" class="btn btn-outline">Contact Me</a>
+
+        </div>
+
+    </div>
+
+
+    <!-- ONLINE PROFILE PHOTO -->
+
+    <div class="hero-image">
+
+        <div class="image-box">
+
+            <img
+                src="abrar1.jpeg"
+                alt="Demo profile portrait - replace with your own photo"
+                fetchpriority="high"
+            >
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+<div class="container">
+
+    <div class="section-title">
+        <h2>About Me</h2>
+        <p>Know more about me</p>
+    </div>
+
+    <div class="about-content">
+
+        <p>
+            My name is Abrar Ahmed. I am interested in Web Development,
+            SEO and Digital Marketing. I am learning HTML, CSS,
+            JavaScript, Google Analytics and Google Tag Manager.
+
+            My goal is to become a professional Web Developer
+            and SEO Expert. I believe in continuous learning
+            and improving my technical skills.
+        </p>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- SKILLS -->
+
+<section id="skills">
+
+<div class="container">
+
+    <div class="section-title">
+        <h2>My Skills</h2>
+        <p>Technologies I am learning</p>
+    </div>
+
+    <div class="skills-grid">
+
+        <div class="skill-card">
+            <h3>HTML5</h3>
+            <p>Website Structure and Semantic HTML</p>
+        </div>
+
+        <div class="skill-card">
+            <h3>CSS3</h3>
+            <p>Responsive Website Design</p>
+        </div>
+
+        <div class="skill-card">
+            <h3>JavaScript</h3>
+            <p>Basic Programming and Interactivity</p>
+        </div>
+
+        <div class="skill-card">
+            <h3>SEO</h3>
+            <p>On-Page, Off-Page and Technical SEO</p>
+        </div>
+
+        <div class="skill-card">
+            <h3>Google Analytics</h3>
+            <p>Website Traffic and Data Analysis</p>
+        </div>
+
+        <div class="skill-card">
+            <h3>Google Tag Manager</h3>
+            <p>Website Tag and Event Management</p>
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- PROJECTS -->
+
+<section class="projects" id="projects">
+
+<div class="container">
+
+    <div class="section-title">
+        <h2>My Projects</h2>
+        <p>Some of my learning projects</p>
+    </div>
+
+    <div class="project-grid">
+
+        <div class="project-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=700"
+                alt="Website portfolio project"
+                loading="lazy"
+            >
+
+            <div class="project-info">
+
+                <h3>Personal Portfolio</h3>
+
+                <p>
+                    A personal portfolio website built using HTML and CSS.
+                </p>
+
+                <a href="#home">View Project</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="project-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=700"
+                alt="Web development project"
+                loading="lazy"
+            >
+
+            <div class="project-info">
+
+                <h3>Abrar Blog</h3>
+
+                <p>
+                    My Blogger website for publishing useful articles.
+                </p>
+
+                <a href="https://abrar2026.blogspot.com/" target="_blank" rel="noopener noreferrer">
+                    Visit Website
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="project-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=700"
+                alt="SEO digital marketing project"
+                loading="lazy"
+            >
+
+            <div class="project-info">
+
+                <h3>SEO Learning</h3>
+
+                <p>
+                    Learning SEO techniques and website optimization.
+                </p>
+
+                <a href="https://abrar2026.blogspot.com/" target="_blank" rel="noopener noreferrer">
+                    View Blog
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- EDUCATION -->
+
+<section id="education">
+
+<div class="container">
+
+    <div class="section-title">
+        <h2>Education</h2>
+        <p>My academic background</p>
+    </div>
+
+    <div class="education-card">
+
+        <h3>My Educational Background</h3>
+
+        <p>
+            Add your qualification, college name and passing year here.
+        </p>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+<div class="container">
+
+    <div class="section-title">
+        <h2>Contact Me</h2>
+        <p>Let's connect and work together</p>
+    </div>
+
+    <p>Email: abarahmedkhan875@gmail.com</p>
+
+    <p>Location: India</p>
+
+    <div class="social">
+
+        <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+            GitHub
+        </a>
+
+        <a href="https://abrar2026.blogspot.com/" target="_blank" rel="noopener noreferrer">
+            Blogger
+        </a>
+
+    </div>
+
+    <br>
+
+    <a href="mailto:your-abrarahmedkhan875@gmail.com" class="btn">
+        Send Me An Email
+    </a>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>© 2026 Abrar Ahmed. All Rights Reserved.</p>
+
+</footer>
+
+</body>
+</html>
